@@ -21,5 +21,11 @@ it('initializes the `state` with an empty list of gifts', () => {
 
 // update the state when we click the add gift button
 it('adds a new gift to `state` when clicking the `add gift` button', () => {
+    // find the button and click it
+    app.find('.btn-add').simulate('click');
 
+    // add a gift into the state
+    expect(app.state().gifts).toEqual([{
+        id: 1
+    }]);
 });
