@@ -13,3 +13,13 @@ const app = shallow(<App />);
 it('renders correctly', () => {
     expect(toJson(app)).toMatchSnapshot();
 });
+
+// 2nd unit test, initialize component state with an empty list of gifts
+it('initializes the `state` with an empty list of gifts', () => {
+    expect(app.state().gifts).toEqual([]);
+});
+
+// update the state when we click the add gift button
+it('adds a new gift to `state` when clicking the `add gift` button', () => {
+
+});
