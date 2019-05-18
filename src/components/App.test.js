@@ -47,6 +47,10 @@ describe('App', () => {
             // check if the gift list children are 2
             expect(app.find('.gift-list').children().length).toEqual(1);
         });
-    });
 
+        // check if App creates a Gift Component
+        it('creates a Gift component', () => {
+            expect(app.find('Gift').exists()).toEqual(true);
+        });
+    });
 });
