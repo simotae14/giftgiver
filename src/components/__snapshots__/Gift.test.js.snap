@@ -1,3 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Gift renders properly 1`] = `<div />`;
+exports[`Gift renders properly 1`] = `
+<div>
+  <Form
+    as="form"
+    inline={false}
+  >
+    <FormGroup
+      as="div"
+    >
+      <FormLabel
+        column={false}
+        srOnly={false}
+      >
+        Person
+      </FormLabel>
+      <FormControl
+        as="input"
+        className="input-person"
+        onChange={[Function]}
+      />
+    </FormGroup>
+  </Form>
+</div>
+`;
