@@ -21,4 +21,16 @@ describe('Gift', () => {
             present: ''
         });
     });
+
+    // check the state update when you type into the input
+    describe('when typing into the person input', () => {
+        const person = 'Uncle';
+        beforeEach(() => {
+            gift.find('.input-person').simulate('change', { target: { value: person } });
+        });
+
+        it('updates the person in `state`', () => {
+            expect(gift.state().person).toEqual(person);
+        });
+    });
 });
