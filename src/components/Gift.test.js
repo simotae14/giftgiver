@@ -22,7 +22,7 @@ describe('Gift', () => {
         });
     });
 
-    // check the state update when you type into the input
+    // check the state update when you type into the input person
     describe('when typing into the person input', () => {
         const person = 'Uncle';
         beforeEach(() => {
@@ -31,6 +31,17 @@ describe('Gift', () => {
 
         it('updates the person in `state`', () => {
             expect(gift.state().person).toEqual(person);
+        });
+    });
+    // check the state update when you type into the input present
+    describe('when typing into the present input', () => {
+        const present = 'Golf Clubs';
+        beforeEach(() => {
+            gift.find('.input-present').simulate('change', { target: { value: present } });
+        });
+
+        it('updates the present in `state`', () => {
+            expect(gift.state().present).toEqual(present);
         });
     });
 });

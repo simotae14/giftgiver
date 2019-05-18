@@ -21,6 +21,21 @@ exports[`Gift renders properly 1`] = `
         onChange={[Function]}
       />
     </FormGroup>
+    <FormGroup
+      as="div"
+    >
+      <FormLabel
+        column={false}
+        srOnly={false}
+      >
+        Present
+      </FormLabel>
+      <FormControl
+        as="input"
+        className="input-present"
+        onChange={[Function]}
+      />
+    </FormGroup>
   </Form>
 </div>
 `;
