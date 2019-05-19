@@ -23,6 +23,13 @@ class App extends Component {
             gifts
         });
     }
+
+    removeGift = id => {
+        const gifts = this.state.gifts.filter(gift => gift.id !== id);
+        this.setState({
+            gifts
+        });
+    }
     render() {
         return (
             <div>
