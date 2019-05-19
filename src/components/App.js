@@ -39,7 +39,13 @@ class App extends Component {
                 <div className="gift-list">
                     {
                         this.state.gifts.map(gift => {
-                            return <Gift key={gift.id} />;
+                            return (
+                                <Gift
+                                    gift={gift}
+                                    removeGift={this.removeGift}
+                                    key={gift.id}
+                                />
+                            );
                         })
                      }
                 </div>
